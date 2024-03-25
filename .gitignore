@@ -15,6 +15,7 @@
 
 # production
 /build
+do-react-para-o-next.code-workspace
 
 # misc
 .DS_Store
