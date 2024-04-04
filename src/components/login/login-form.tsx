@@ -30,7 +30,7 @@ export default function LoginForm() {
 
   useEffect(() => {
     if (state.ok) {
-      window.location.href = '/conta'
+      window.location.href = '/profile'
     }
   }, [state.ok])
 
@@ -38,7 +38,7 @@ export default function LoginForm() {
     <>
       <form action={action} className={styles.form}>
         <Input label="Usuário" name="username" type="text" />
-        <Input label="Senha" name="username" type="password" />
+        <Input label="Senha" name="password" type="password" />
         <ErrorMessage error={state.error} />
         <FormButton />
       </form>
