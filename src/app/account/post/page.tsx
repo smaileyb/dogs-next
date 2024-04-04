@@ -1,7 +1,12 @@
+import AccountPhotoPost from '@/components/account/account-photo-post'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Postar | Minha Conta'
+}
+
+export const runtime = 'edge'
+
 export default async function PostPage() {
-  return (
-    <main>
-      <h1>Post</h1>
-    </main>
-  )
+  return <AccountPhotoPost />
 }
