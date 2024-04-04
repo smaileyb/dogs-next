@@ -7,7 +7,7 @@ export async function middleware(request: NextRequest) {
   if (!authenticated && request.nextUrl.pathname.startsWith('/account')) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
-  if (!authenticated && request.nextUrl.pathname.startsWith('/login')) {
+  if (authenticated && request.nextUrl.pathname.startsWith('/login')) {
     return NextResponse.redirect(new URL('/account', request.url))
   }
   return NextResponse.next()

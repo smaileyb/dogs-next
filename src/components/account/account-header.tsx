@@ -9,6 +9,8 @@ import styles from './account-header.module.css'
 import { usePathname } from 'next/navigation'
 import useMedia from '@/hooks/useMedia'
 import Link from 'next/link'
+import logout from '@/actions/logout'
+import { useUserContext } from '@/context/user-context'
 
 function getTitle(pathname: string) {
   switch (pathname) {
@@ -30,7 +32,11 @@ const AccountHeaderNav = () => {
     setMobileMenu(false)
   }, [pathname])
 
-  function handleLogout() {}
+  const { setUser } = useUserContext()
+  async function handleLogout() {
+    await logout()
+    setUser(null)
+  }
 
   return (
     <header className={styles.header}>
