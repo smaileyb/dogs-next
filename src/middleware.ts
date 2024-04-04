@@ -10,7 +10,7 @@ export async function middleware(request: NextRequest) {
   if (!authenticated && request.nextUrl.pathname.startsWith('/login')) {
     return NextResponse.redirect(new URL('/account', request.url))
   }
-  return NextResponse.next
+  return NextResponse.next()
 }
 
 export const config = {
