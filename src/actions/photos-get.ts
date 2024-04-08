@@ -23,10 +23,10 @@ type PhotosGetParams = {
 
 export default async function photosGet(
   { page = 1, total = 6, user = 0 }: PhotosGetParams = {},
-  optionsFontEnd?: RequestInit
+  optionsFrontEnd?: RequestInit
 ) {
   try {
-    const options = optionsFontEnd || {
+    const options = optionsFrontEnd || {
       next: {
         revalidate: 10,
         tags: ['photos']
