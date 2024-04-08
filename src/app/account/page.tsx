@@ -14,7 +14,7 @@ export default async function AccountPage() {
   return (
     <section>
       {data?.length ? (
-        <Feed photos={data} />
+        <Feed photos={data} user={user?.username} />
       ) : (
         <div>
           <p
