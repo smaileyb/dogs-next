@@ -23,7 +23,7 @@ export default async function AccountPage() {
             Você ainda não postou nenhuma foto.
           </p>
           <Link
-            href={`/conta/postar`}
+            href={`/account/post`}
             className="button"
             style={{ display: 'inline-block' }}
           >
