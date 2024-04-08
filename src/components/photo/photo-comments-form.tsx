@@ -6,6 +6,7 @@ import { useFormState, useFormStatus } from 'react-dom'
 import SendIcon from '@/icons/send-icon'
 import ErrorMessage from '../helper/error-message'
 import commentPost from '@/actions/comment-post'
+import { Comment } from '@/actions/photo-get'
 
 const PhotoCommentsForm = ({
   single,
